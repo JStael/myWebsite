@@ -1,0 +1,36 @@
+@import "../styles/colors.scss";
+
+.dark {
+  .footer {
+    background-color: $black;
+  }
+
+  p {
+    color: $white;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8vh;
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin: 0;
+    font-style: italic;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 60px;
+  }
+}
