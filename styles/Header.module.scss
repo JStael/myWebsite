@@ -186,3 +186,17 @@
     }
   }
 }
+
+@media (min-width: 410px) {
+  .container_menu {
+    ul {
+      li {
+        font-size: 2rem;
+
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
