@@ -54,10 +54,25 @@ const Header = () => {
     }
   }
 
+  function changePageAbout() {
+    router.push("/sobre");
+    setMenu(!menu);
+  }
+
+  function changePagePortfolio() {
+    router.push("/portfolio");
+    setMenu(!menu);
+  }
+
   return (
     <div className={`${theme}`} style={{ width: "100%" }}>
       <header className={`${styles.header} ${contClassnameBackgd}`}>
-        <h2 className={`${styles.brand} ${contClassnameTitle}`}>JS</h2>
+        <h2
+          className={`${styles.brand} ${contClassnameTitle}`}
+          onClick={() => router.push("/")}
+        >
+          JS
+        </h2>
         <div className={styles.btn_wrapper} onClick={() => setMenu(!menu)}>
           <span className={contClassnameTBar}></span>
           <span className={contClassnameBar}></span>
@@ -70,8 +85,8 @@ const Header = () => {
                 <Image src={appTheme == "light" ? lightTheme : darkTheme} />
               </button>
             </li>
-            <li onClick={() => router.push("/sobre")}>Sobre</li>
-            <li onClick={() => router.push("/portfolio")}>Portfólio</li>
+            <li onClick={changePageAbout}>Sobre</li>
+            <li onClick={changePagePortfolio}>Portfólio</li>
             <li>
               <Link href={"mailto:joaostael@gmail.com"}>Contato</Link>
             </li>

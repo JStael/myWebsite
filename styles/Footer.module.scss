@@ -2,7 +2,7 @@
 
 .dark {
   .footer {
-    background-color: $black;
+    background-color: $light-black;
   }
 
   p {
@@ -10,11 +10,21 @@
   }
 }
 
+.light {
+  .footer {
+    background-color: $white;
+  }
+}
+
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 8vh;
+  height: 7vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   p {
     display: flex;
@@ -31,6 +41,6 @@
   }
 
   img {
-    width: 60px;
+    width: 50px;
   }
 }

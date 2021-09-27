@@ -1,6 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import Header from "../components/Header";
+import sass from "../../public/sass.svg";
+import react from "../../public/react.svg";
+import nextjs from "../../public/nextjs.svg";
+import imgHome from "../../public/imgHome.svg";
+import balloon from "../../public/balloon.svg";
+import arrowOne from "../../public/arrowOne.svg";
 import { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../provider/GlobalContext";
 
@@ -25,7 +30,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <main className={styles.main}></main>
+        <main className={styles.main}>
+          <div className={styles.arrowOne}>
+            <Image src={arrowOne} alt="Seta apontando para o nome João Stael" />
+          </div>
+          <h1>
+            olá, sou <br />
+            <span>João Stael</span> <br />
+            desenvolvedor <br />
+            front-end
+          </h1>
+          <div className={styles.technologies}>
+            <div className={styles.reactLogo}>
+              <Image src={react} alt="Logo React JS" />
+              <p>React</p>
+            </div>
+            <Image src={nextjs} alt="Logo Next JS" />
+            <Image src={sass} alt="Logo Sass" />
+            <div className={styles.reactNativeLogo}>
+              <Image src={react} alt="Logo React Native" />
+              <p>React Native</p>
+            </div>
+          </div>
+          <div className={styles.imgHome}>
+            <div className={styles.balloon}>
+              <Image src={balloon} alt="Balão de pensamento" />
+            </div>
+            <div className={styles.developing}>
+              <Image
+                src={imgHome}
+                alt="Imagem meramente ilustrativa de João Stael programando"
+              />
+            </div>
+          </div>
+        </main>
       </div>
     </div>
   );
