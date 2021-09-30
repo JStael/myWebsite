@@ -78,19 +78,34 @@ const Header = () => {
           <span className={contClassnameBar}></span>
           <span className={contClassnameBBar}></span>
         </div>
-        <nav className={`${styles.container_menu} ${contClassnameLinks}`}>
-          <ul>
-            <li>
-              <button className={styles.btn_theme} onClick={changeTheme}>
-                <Image src={appTheme == "light" ? lightTheme : darkTheme} />
-              </button>
-            </li>
-            <li onClick={changePageAbout}>Sobre</li>
-            <li onClick={changePagePortfolio}>Portfólio</li>
-            <li>
-              <Link href={"mailto:joaostael@gmail.com"}>Contato</Link>
-            </li>
-          </ul>
+        <div className={styles.container_desktop_menu}>
+          <nav>
+            <ul>
+              <li onClick={() => router.push("/sobre")}>Sobre</li>
+              <li onClick={() => router.push("/portfolio")}>Portfólio</li>
+              <li>
+                <Link href={"mailto:joaostael@gmail.com"}>Contato</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div
+          className={`${styles.container_mobile_menu} ${contClassnameLinks}`}
+        >
+          <nav>
+            <ul>
+              <li>
+                <button className={styles.btn_theme} onClick={changeTheme}>
+                  <Image src={appTheme == "light" ? lightTheme : darkTheme} />
+                </button>
+              </li>
+              <li onClick={changePageAbout}>Sobre</li>
+              <li onClick={changePagePortfolio}>Portfólio</li>
+              <li>
+                <Link href={"mailto:joaostael@gmail.com"}>Contato</Link>
+              </li>
+            </ul>
+          </nav>
           <ul className={styles.social}>
             <li>
               <Link href={"https://github.com/JStael"}>
@@ -116,8 +131,11 @@ const Header = () => {
                 </a>
               </Link>
             </li>
+            <li className={styles.desktop_btn_theme} onClick={changeTheme}>
+              <Image src={appTheme == "light" ? lightTheme : darkTheme} />
+            </li>
           </ul>
-        </nav>
+        </div>
       </header>
     </div>
   );

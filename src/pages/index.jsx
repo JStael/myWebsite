@@ -6,6 +6,8 @@ import nextjs from "../../public/nextjs.svg";
 import imgHome from "../../public/imgHome.svg";
 import balloon from "../../public/balloon.svg";
 import arrowOne from "../../public/arrowOne.svg";
+import arrowTwo from "../../public/arrowTwo.svg";
+import idea from "../../public/idea.svg";
 import { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../provider/GlobalContext";
 
@@ -34,22 +36,24 @@ export default function Home() {
           <div className={styles.arrowOne}>
             <Image src={arrowOne} alt="Seta apontando para o nome João Stael" />
           </div>
-          <h1>
-            olá, sou <br />
-            <span>João Stael</span> <br />
-            desenvolvedor <br />
-            front-end
-          </h1>
-          <div className={styles.technologies}>
-            <div className={styles.reactLogo}>
-              <Image src={react} alt="Logo React JS" />
-              <p>React</p>
-            </div>
-            <Image src={nextjs} alt="Logo Next JS" />
-            <Image src={sass} alt="Logo Sass" />
-            <div className={styles.reactNativeLogo}>
-              <Image src={react} alt="Logo React Native" />
-              <p>React Native</p>
+          <div>
+            <h1>
+              olá, sou <br />
+              <span>João Stael</span> <br />
+              desenvolvedor <br />
+              front-end
+            </h1>
+            <div className={styles.technologies}>
+              <div className={styles.reactLogo}>
+                <Image src={react} alt="Logo React JS" />
+                <p>React</p>
+              </div>
+              <Image src={nextjs} alt="Logo Next JS" />
+              <Image src={sass} alt="Logo Sass" />
+              <div className={styles.reactNativeLogo}>
+                <Image src={react} alt="Logo React Native" />
+                <p>React Native</p>
+              </div>
             </div>
           </div>
           <div className={styles.imgHome}>
@@ -57,10 +61,20 @@ export default function Home() {
               <Image src={balloon} alt="Balão de pensamento" />
             </div>
             <div className={styles.developing}>
-              <Image
-                src={imgHome}
-                alt="Imagem meramente ilustrativa de João Stael programando"
-              />
+              <div className={styles.leftImages}>
+                <div className={styles.arrowTwo}>
+                  <Image src={arrowTwo} alt="Seta indicando as tecnologias" />
+                </div>
+                <div className={styles.idea}>
+                  <Image src={idea} alt="Lâmpada indicando idéia" />
+                </div>
+              </div>
+              <div className={styles.imDeveloping}>
+                <Image
+                  src={imgHome}
+                  alt="Imagem meramente ilustrativa de João Stael programando"
+                />
+              </div>
             </div>
           </div>
         </main>
