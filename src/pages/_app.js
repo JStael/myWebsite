@@ -9,6 +9,16 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <meta
+          name="description"
+          content="Desenvolvedor de sistemas web e sites responsivos."
+        />
+        <meta
+          name="keywords"
+          content="Sistemas Web, Websites responsivos, sites pessoais, criação de sites"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="João Stael" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
